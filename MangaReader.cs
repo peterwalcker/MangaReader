@@ -154,12 +154,15 @@ namespace MangaReader
         
         private void ChangePageSize(int direction, int mouseFactor = 1)
         {
-            pictureBox1.Size = new Size(pictureBox1.Width += mouseFactor * direction * 48, pictureBox1.Height += mouseFactor * direction * 27);
-            pictureBox1.Location = new Point(pictureBox1.Location.X - mouseFactor * direction * 24, CheckPageLocation(pictureBox1.Location.Y));
+            pictureBox1.Size = new Size(pictureBox1.Width += mouseFactor * direction * 48, 
+                pictureBox1.Height += mouseFactor * direction * 27);
+            pictureBox1.Location = new Point(pictureBox1.Location.X - mouseFactor * direction * 24, 
+                CheckPageLocation(pictureBox1.Location.Y));
         }
         private void ScrollPage(int direction, int mouseFactor = 1)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X, CheckPageLocation(pictureBox1.Location.Y + (mouseFactor * direction * 30)));
+            pictureBox1.Location = new Point(pictureBox1.Location.X, 
+                CheckPageLocation(pictureBox1.Location.Y + (mouseFactor * direction * 30)));
         }
 
         private void OpenFolder()
@@ -180,7 +183,8 @@ namespace MangaReader
             using(OpenFileDialog dialog = new OpenFileDialog())
             {
                 dialog.Multiselect = false;
-                //dialog.InitialDirectory = Path.GetPathRoot(Environment.SystemDirectory) + "Users\\" + Environment.UserName + "\\Desktop\\";
+                dialog.InitialDirectory = Path.GetPathRoot(Environment.SystemDirectory) + "Users\\" + 
+                    Environment.UserName + "\\Desktop\\";
                 DialogResult result = dialog.ShowDialog();
                 if( result == DialogResult.OK )
                 {
