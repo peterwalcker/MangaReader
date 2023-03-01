@@ -81,13 +81,13 @@ namespace MangaReader
         {
             if(e.Delta > 0)
             {
-                if (_secondaryControlMode) ChangePageSize(1);
-                else ScrollPage(1, 2);
+                if (_secondaryControlMode) ChangePageSize(1, 3);
+                else ScrollPage(1, 3);
             }
             else
             {
-                if (_secondaryControlMode) ChangePageSize(-1);
-                else ScrollPage(-1, 2);
+                if (_secondaryControlMode) ChangePageSize(-1, 3);
+                else ScrollPage(-1, 3);
             }
         }
         
@@ -152,14 +152,14 @@ namespace MangaReader
             ReloadPage();
         }
         
-        private void ChangePageSize(int direction)
+        private void ChangePageSize(int direction, int mouseFactor = 1)
         {
-            pictureBox1.Size = new Size(pictureBox1.Width += direction * 30, pictureBox1.Height += direction * 30);
-            pictureBox1.Location = new Point(pictureBox1.Location.X - direction * 15, CheckPageLocation(pictureBox1.Location.Y));
+            pictureBox1.Size = new Size(pictureBox1.Width += mouseFactor * direction * 48, pictureBox1.Height += mouseFactor * direction * 27);
+            pictureBox1.Location = new Point(pictureBox1.Location.X - mouseFactor * direction * 24, CheckPageLocation(pictureBox1.Location.Y));
         }
         private void ScrollPage(int direction, int mouseFactor = 1)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X, CheckPageLocation(pictureBox1.Location.Y + (direction * 30)));
+            pictureBox1.Location = new Point(pictureBox1.Location.X, CheckPageLocation(pictureBox1.Location.Y + (mouseFactor * direction * 30)));
         }
 
         private void OpenFolder()
@@ -180,7 +180,7 @@ namespace MangaReader
             using(OpenFileDialog dialog = new OpenFileDialog())
             {
                 dialog.Multiselect = false;
-                dialog.InitialDirectory = Path.GetPathRoot(Environment.SystemDirectory) + "Users\\" + Environment.UserName + "\\Desktop\\";
+                //dialog.InitialDirectory = Path.GetPathRoot(Environment.SystemDirectory) + "Users\\" + Environment.UserName + "\\Desktop\\";
                 DialogResult result = dialog.ShowDialog();
                 if( result == DialogResult.OK )
                 {
