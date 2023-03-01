@@ -107,9 +107,12 @@ namespace MangaReader
 
         private void MangaReader_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if(_secondaryControlMode)
+            if (e.Button == MouseButtons.Left)
             {
-                Environment.Exit(0);
+                if (_secondaryControlMode)
+                {
+                    Environment.Exit(0);
+                }
             }
         }
 
