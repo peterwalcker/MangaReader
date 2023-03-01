@@ -1,0 +1,11 @@
+D:\repo\MangaReader\bin\Release\MangaReader.exe.config
+D:\repo\MangaReader\bin\Release\MangaReader.exe
+D:\repo\MangaReader\bin\Release\MangaReader.pdb
+D:\repo\MangaReader\obj\Release\MangaReader.csproj.AssemblyReference.cache
+D:\repo\MangaReader\obj\Release\MangaReader.csproj.SuggestedBindingRedirects.cache
+D:\repo\MangaReader\obj\Release\MangaReader.MangaReader.resources
+D:\repo\MangaReader\obj\Release\MangaReader.Properties.Resources.resources
+D:\repo\MangaReader\obj\Release\MangaReader.csproj.GenerateResource.cache
+D:\repo\MangaReader\obj\Release\MangaReader.csproj.CoreCompileInputs.cache
+D:\repo\MangaReader\obj\Release\MangaReader.exe
+D:\repo\MangaReader\obj\Release\MangaReader.pdb

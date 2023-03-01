@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
 [assembly: AssemblyTitle("MangaReader")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This viewer was created to simplify the reading of manga")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("UseLo(o)se")]
 [assembly: AssemblyProduct("MangaReader")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © UseLo(o)se 2023")]
+[assembly: AssemblyTrademark("UseLo(o)se")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
