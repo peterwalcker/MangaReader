@@ -79,16 +79,9 @@ namespace MangaReader
 
         private void MangaReader_MouseWheel(object sender, MouseEventArgs e)
         {
-            if(e.Delta > 0)
-            {
-                if (_secondaryControlMode) ChangePageSize(1, 3);
-                else ScrollPage(1, 3);
-            }
-            else
-            {
-                if (_secondaryControlMode) ChangePageSize(-1, 3);
-                else ScrollPage(-1, 3);
-            }
+            int scroll = e.Delta / 120;
+            if (_secondaryControlMode) ChangePageSize(scroll, 3);
+            else ScrollPage(scroll, 3);
         }
         
         private void MangaReader_MouseClick(object sender, MouseEventArgs e)
@@ -159,6 +152,7 @@ namespace MangaReader
             pictureBox1.Location = new Point(pictureBox1.Location.X - mouseFactor * direction * 24, 
                 CheckPageLocation(pictureBox1.Location.Y));
         }
+
         private void ScrollPage(int direction, int mouseFactor = 1)
         {
             pictureBox1.Location = new Point(pictureBox1.Location.X, 
