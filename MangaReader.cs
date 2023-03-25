@@ -5,9 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace MangaReader
 {
@@ -192,11 +195,13 @@ namespace MangaReader
             bool isFile = Path.HasExtension(path);
             string folderPath = isFile ? Path.GetDirectoryName(path) : path;
             _files = Directory.GetFiles(folderPath, "*.??g", SearchOption.AllDirectories).ToList();
+            _files = _files.OrderBy(x => int.Parse(Regex.Replace(x, "[^0-9]+", "0"))).ToList<string>();
             _index = isFile ? _files.IndexOf(path) : 0;
             pictureBox1.Size = _resolution;
             pictureBox1.Location = new Point(0, 0);
             ReloadPage();
         }
+
 
         private void ReloadPage()
         {
