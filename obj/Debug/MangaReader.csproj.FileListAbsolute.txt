@@ -2,7 +2,6 @@ D:\repo\MangaReader\bin\Debug\MangaReader.exe.config
 D:\repo\MangaReader\bin\Debug\MangaReader.exe
 D:\repo\MangaReader\bin\Debug\MangaReader.pdb
 D:\repo\MangaReader\obj\Debug\MangaReader.csproj.AssemblyReference.cache
-D:\repo\MangaReader\obj\Debug\MangaReader.csproj.SuggestedBindingRedirects.cache
 D:\repo\MangaReader\obj\Debug\MangaReader.Properties.Resources.resources
 D:\repo\MangaReader\obj\Debug\MangaReader.csproj.GenerateResource.cache
 D:\repo\MangaReader\obj\Debug\MangaReader.csproj.CoreCompileInputs.cache

@@ -195,7 +195,14 @@ namespace MangaReader
             bool isFile = Path.HasExtension(path);
             string folderPath = isFile ? Path.GetDirectoryName(path) : path;
             _files = Directory.GetFiles(folderPath, "*.??g", SearchOption.AllDirectories).ToList();
-            _files = _files.OrderBy(x => int.Parse(Regex.Replace(x, "[^0-9]+", "0"))).ToList<string>();
+            try
+            {
+                _files = _files.OrderBy(x => int.Parse(Regex.Replace(x, "[^0-9]+", "0"))).ToList<string>();
+            }
+            catch
+            {
+                ;
+            }
             _index = isFile ? _files.IndexOf(path) : 0;
             pictureBox1.Size = _resolution;
             pictureBox1.Location = new Point(0, 0);
